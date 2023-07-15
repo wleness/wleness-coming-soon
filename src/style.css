@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-theme-primary{
+    background: rgb(235,218,255);
+    background: -moz-linear-gradient(145deg, rgba(235,218,255,1) 0%, rgba(255,255,255,1) 20%, rgba(232,254,246,1) 80%, rgba(181,252,227,1) 100%);
+    background: -webkit-linear-gradient(145deg, rgba(235,218,255,1) 0%, rgba(255,255,255,1) 20%, rgba(232,254,246,1) 80%, rgba(181,252,227,1) 100%);
+    background: linear-gradient(145deg, rgba(235,218,255,1) 0%, rgba(255,255,255,1) 20%, rgba(232,254,246,1) 80%, rgba(181,252,227,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ebdaff",endColorstr="#b5fce3",GradientType=1);
+}
