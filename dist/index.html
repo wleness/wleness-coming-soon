@@ -54,16 +54,21 @@
         <h1
           class="text-[#289C90] text-3xl text-center sm:text-4xl mb-3 lg:text-5xl font-lato"
         >
-         Good things, take time!
+          Get Ready, We're Coming Soon
         </h1>
         <h4 class="text-slate-400 text-center sm:text-lg">
-          Your journey to breathe and move forward with your happiness.
+          Your journey to breath and move forward with your happiness.
         </h4>
       </hgroup>
 
-      <form
+      <!-- <form
         class="w-full lg:w-[520px] flex md:flex-row flex-col gap-3"
         id="contactpage"
+      > -->
+      <form
+        class="w-full lg:w-[520px] flex md:flex-row flex-col gap-3"
+        name="contact"
+        netlify
       >
         <div class="md:w-[70%]">
           <input
@@ -78,7 +83,7 @@
           type="submit"
           class="md:w-[30%] bg-[#54BDAF] text-white rounded-2xl py-3 px-8"
         >
-          Notify Me!
+          Notify Me !
         </button>
       </form>
 
@@ -131,10 +136,9 @@
       </li>
     </ul>
 
-    <script>
+    <!-- <script>
       const form = document.getElementById("contactpage");
       let formAlert = document.getElementById("form_result");
-      let contactForm = document.getElementById("contactpage");
 
       form.addEventListener("submit", formSubmit);
 
@@ -149,18 +153,24 @@
         if (email.value == "") {
           showMsg(false, "Please enter your email");
         } else {
-          fetch("https://getform.io/f/f408f6b7-fb9f-4364-9214-508a9634a0d9", {
+          fetch("http://127.0.0.1:5000/email", {
             method: "POST",
             body: formData,
-            headers: {
-              Accept: "application/json",
-            },
+            // headers: {
+            //   Accept: "application/json",
+            // },
           })
             .then(
-              (response) => showMsg(true, "Successfully, Submitted Email"),
-              (email.value = "")
+              // (response) => showMsg(true, "Successfully, Submitted Email"),
+              // (email.value = "")
+              (response) =>
+                // showMsg(response.status, "Successfully, Submitted Email"),
+                console.log(response)
             )
-            .catch((error) => showMsg(false, "Please Try Again!"));
+            .catch(
+              // (error) => showMsg(response.status, "Please Try Again!"),
+              console.log(response)
+            );
         }
       }
 
@@ -173,6 +183,6 @@
           formAlert.innerText = msg;
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
