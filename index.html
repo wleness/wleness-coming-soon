@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wleness Coming Soon</title>
     <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .typed-cursor {
+        font-size: 34px;
+      }
+    </style>
   </head>
   <body
     class="flex justify-center flex-col h-[100svh] rounded-3xl bg-[url(./bg.jpg)] bg-no-repeat bg-cover bg-center"
@@ -51,10 +56,9 @@
     >
       <hgroup class="mb-5 sm:mb-14">
         <h1
+          id="mainHeading"
           class="text-[#289C90] text-3xl text-center sm:text-4xl mb-3 lg:text-5xl font-lato"
-        >
-          Get Ready, We're Coming Soon
-        </h1>
+        ></h1>
         <h4 class="text-slate-400 text-center sm:text-lg">
           Your journey to breath and move forward with your happiness.
         </h4>
@@ -131,4 +135,19 @@
       </li>
     </ul>
   </body>
+
+  <script type="module">
+    import Typed from "typed.js";
+
+    const typed = new Typed("#mainHeading", {
+      strings: ["Hey Buddy! <br> Good things take time."],
+      typeSpeed: 30,
+      backSpeed: 20,
+
+      smartBackspace: true, // Default value
+      loop: true,
+
+      cursorChar: "",
+    });
+  </script>
 </html>
