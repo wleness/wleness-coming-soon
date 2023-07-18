@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wleness Coming Soon</title>
     
-    <link rel="stylesheet" href="/assets/index-f46a74d3.css">
+    <link rel="stylesheet" href="/assets/index-f06ef570.css">
   </head>
   <body
-    class="flex justify-center flex-col h-screen rounded-3xl bg-[url(./bg.jpg)] bg-no-repeat bg-cover bg-center"
+    class="flex justify-center flex-col h-[100svh] rounded-3xl bg-[url(./bg.jpg)] bg-no-repeat bg-cover bg-center"
   >
     <!-- Design Elements -->
     <img
@@ -35,7 +35,7 @@
 
     <!-- Logo -->
     <div
-      class="w-64 mx-auto py-2 px-3 mb-8 lg:mb-10 md:w-72 xl:w-96 2xl:w-[420px]"
+      class="w-64 mx-auto py-2 px-3 mb-14 lg:mb-10 md:w-72 xl:w-96 2xl:w-[420px]"
     >
       <a href="/">
         <img
@@ -61,10 +61,6 @@
         </h4>
       </hgroup>
 
-      <!-- <form
-        class="w-full lg:w-[520px] flex md:flex-row flex-col gap-3"
-        id="contactpage"
-      > -->
       <form
         class="w-full lg:w-[520px] flex md:flex-row flex-col gap-3"
         name="contact"
@@ -81,7 +77,7 @@
         </div>
         <button
           type="submit"
-          class="md:w-[30%] bg-[#54BDAF] text-white rounded-2xl py-3 px-8"
+          class="md:w-[30%] bg-[#54BDAF] w-fit mx-auto text-white rounded-2xl py-3 px-8"
         >
           Notify Me !
         </button>
@@ -135,54 +131,5 @@
         </a>
       </li>
     </ul>
-
-    <!-- <script>
-      const form = document.getElementById("contactpage");
-      let formAlert = document.getElementById("form_result");
-
-      form.addEventListener("submit", formSubmit);
-
-      function formSubmit(e) {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-
-        // Get form values
-        let email = document.getElementById("email");
-
-        // Validate form values
-        if (email.value == "") {
-          showMsg(false, "Please enter your email");
-        } else {
-          fetch("http://127.0.0.1:5000/email", {
-            method: "POST",
-            body: formData,
-            // headers: {
-            //   Accept: "application/json",
-            // },
-          })
-            .then(
-              // (response) => showMsg(true, "Successfully, Submitted Email"),
-              // (email.value = "")
-              (response) =>
-                // showMsg(response.status, "Successfully, Submitted Email"),
-                console.log(response)
-            )
-            .catch(
-              // (error) => showMsg(response.status, "Please Try Again!"),
-              console.log(response)
-            );
-        }
-      }
-
-      function showMsg(bool, msg) {
-        if (bool) {
-          formAlert.classList.add("text-green-500");
-          formAlert.innerText = msg;
-        } else {
-          formAlert.classList.add("text-red-500");
-          formAlert.innerText = msg;
-        }
-      }
-    </script> -->
   </body>
 </html>
